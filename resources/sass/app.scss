@@ -1,0 +1,6 @@
+@tailwind preflight;
+@tailwind components;
+// Custom Components
+@import "./transitions/fade";
+@tailwind utilities;
+// Custom Utilities
