@@ -15,7 +15,8 @@ const app = new Vue({
         name: '',
         content: '',
         show: 1,
-        lastResults: []
+        lastResults: [],
+        resultTimeout: null,
     },
     mounted() {
         this.lastResults = localStorage.getItem('lastResults') ? JSON.parse(localStorage.getItem('lastResults')) : [];
@@ -48,7 +49,10 @@ const app = new Vue({
                 this.updateLastResult();
             }
             this.showResult = true;
-            setTimeout(() => {
+            if(this.resultTimeout) {
+                clearTimeout(this.resultTimeout);
+            }
+            this.resultTimeout = setTimeout(() => {
                 this.showResult = false;
             }, 3000)
         },
