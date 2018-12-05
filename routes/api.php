@@ -2,6 +2,6 @@
 
 use Illuminate\Http\Request;
 
-Route::get('lists', 'BarcodeListController@index');
-Route::post('lists', 'BarcodeListController@create');
-Route::delete('lists/{list}', 'BarcodeListController@destroy');
+Route::get('lists', 'BarcodeListController@index')->middleware('auth');
+Route::post('lists', 'BarcodeListController@create')->middleware('auth');
+Route::delete('lists/{list}', 'BarcodeListController@destroy')->middleware('auth');

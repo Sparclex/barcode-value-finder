@@ -1,0 +1,13 @@
+.button {
+    @apply px-4 py-2 bg-grey-light text-black no-underline rounded;
+    &:hover {
+        @apply bg-grey-lighter;
+    }
+}
+.button-primary {
+    @apply bg-blue text-white;
+
+    &:hover {
+        @apply bg-blue-dark;
+    }
+}

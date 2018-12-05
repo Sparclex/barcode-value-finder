@@ -109,9 +109,13 @@
         position: relative;
     }
 
-    .viewport canvas, .viewport video {
+    .viewport canvas {
         position: absolute;
         left: 0;
         top: 0;
     }
+  #interactive.viewport > canvas, #interactive.viewport > video {
+      max-width: 100%;
+      width: 100%;
+  }
 </style>
